@@ -1,14 +1,14 @@
 # deep-env
 Launch your own deep learning environment with ease
 
-## Pre-requasites
+## Pre-requisite
 - `docker`
 - `docker-compose`
 - `nvidia driver`
 - `cuda 9.0`
 - `nvidia docker`
 
-## Quick start
+## Quickstart
 ### Clone `deep-backend/deep-env` repository
 ```
 cd ~/
