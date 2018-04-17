@@ -2,7 +2,6 @@ version: '2.4'
 services:
 
   keras-py27-jupyter:
-    build: ./deepo_keras-py27-jupyter-cudnn-7-0
     image: encoredtechr/deepo:keras-py27-jupyter-cudnn7.0
     depends_on:
       - cuda-9-0_cudnn-7-0
@@ -18,5 +17,4 @@ services:
     command: jupyter notebook
 
   cuda-9-0_cudnn-7-0:
-    build: ./nvidia_cuda-9-0_cudnn-7-0
     image: encoredtechr/cuda:9.0-cudnn7.0
