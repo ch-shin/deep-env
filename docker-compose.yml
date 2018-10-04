@@ -9,7 +9,7 @@ services:
       - 8888:8888
     environment:
       - HOME=${HOME}
-      - JUPYTER_PASSWD=${JUPYTER_PASSWD}
+      - JUPYTER_PASSWD=Dlszhdjem
     volumes:
       - ${HOME}:${HOME}
       - ./jupyter-config:${HOME}/.jupyter
