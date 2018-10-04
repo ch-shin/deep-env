@@ -21,6 +21,12 @@ cd deep-env
 export JUPYTER_PASSWD=TYPE_PASSWD_YOU_WANT
 ```
 
+### Set DOCKER_HOST
+```
+export DOCKER_HOST=tcp://0.0.0.0:2376
+```
+
+
 ### Launch Jupyter Notebook with `docker-compose`
 This step will takes some minutes for the first time.
 ```
