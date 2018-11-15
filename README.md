@@ -68,17 +68,11 @@ docker-compose down
 
 ## Using docker command with ease
 
-If you are tired of typing `-H tcp://0.0.0.0:2375` as docker option for simple docker command, just add bash alias in `~/.bashrc` as followings:
+If you are tired of typing `-H tcp://0.0.0.0:2375` as docker option for simple docker command or seeing `Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?` errors, just add environment variable in `~/.bashrc` as followings:
 
 ```bash
 # in ~/.bashrc
-alias docker="docker -H tcp://0.0.0.0:2375"
+export DOCKER_HOST="docker -H tcp://0.0.0.0:2375"
 ```
 
-Then login again.
-
-Then you don't have to see following message:
-
-```bash
-Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
-```
+After login again, you could use docker command without typing `-H tcp://0.0.0.0:2375` options for every docker command.
