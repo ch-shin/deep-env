@@ -1,12 +1,12 @@
 version: '2.4'
 services:
 
-  keras-py27-jupyter:
+  keras-py27-jupyter-eunsoo:
     image: encoredtechr/deepo:keras-py27-jupyter-cudnn7.0
     depends_on:
-      - cuda-9-0_cudnn-7-0
+      - cuda-9-0_cudnn-7-0-${CONTAINER_PREFIX}
     ports:
-      - 8888:8888
+      - 10000:8888
     environment:
       - HOME=${HOME}
       - JUPYTER_PASSWD=${JUPYTER_PASSWD}
@@ -16,5 +16,5 @@ services:
     runtime: nvidia
     command: jupyter notebook
 
-  cuda-9-0_cudnn-7-0:
+  cuda-9-0_cudnn-7-0-eunsoo:
     image: encoredtechr/cuda:9.0-cudnn7.0
