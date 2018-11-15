@@ -47,7 +47,7 @@ docker-compose up -d
 ```
 
 #### Connect to Jupyter Notebook
-On browser, connect to `HOST_IP:JUPYTER_PORT` then type password as you set via environment variable `JUPYTER_PASSWD`. `JUPYTER_PORT` is the port number set in config.sh
+On browser, connect to `HOST_IP:port` then type password as you set via environment variable `JUPYTER_PASSWD`. `port` is not necessarily same with `JUPYTER_PORT`; it depends how you port forward when you access via ssh, `ssh -L some_port:localhost:JUPYTER_PORT` for example.
 
 - Your host's home folder is mounted to container's home folder `(/home/YOUR_USER_NAME)`
   - If you add or delete files on Jupyter Notebook, then this changes will eventually affects the files on host. Be **careful**.
