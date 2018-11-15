@@ -18,7 +18,7 @@ cd deep-env
 
 ### Set Jupyter configuration in config.sh
 
-Change `config.sh` for your jupyter docker container. Make sure using unique `COMPOSE_PROJECT_NAME` to prevent any issues caused by duplicated container name. `docker-compose` use `COMPOSE_PROJECT_NAME` as prefix of container name.
+Change `config.sh` for your jupyter docker container. Make sure using unique `COMPOSE_PROJECT_NAME` to prevent any issues caused by duplicated container name. `docker-compose` use `COMPOSE_PROJECT_NAME` as prefix of container name. `DOCKER_HOST` is socket where the docker daemon is listening and you don't have to change it.
 
 ```bash
 # in config.sh
@@ -26,9 +26,7 @@ export JUPYTER_PASSWD="mypassword"
 export JUPYTER_PORT="8888"
 export DOCKER_HOST="tcp://0.0.0.0:2375"
 export COMPOSE_PROJECT_NAME="test"
-```
-
-`COMPOSE_PROJECT_NAME` is the prefix of container name, which prevent issues with duplicated service names. `DOCKER_HOST` is socket where the docker daemon is listening.
+``` 
 
 
 ### Launch Jupyter Notebook
@@ -75,4 +73,10 @@ If you are tired of typing `-H tcp://0.0.0.0:2375` as docker option for simple d
 export DOCKER_HOST="docker -H tcp://0.0.0.0:2375"
 ```
 
-After login again, you could use docker command without typing `-H tcp://0.0.0.0:2375` options for every docker command.
+And then, run `source` command.
+
+```bash
+source ~/.bashrc
+```
+
+Now you can use docker command without typing `-H tcp://0.0.0.0:2375` options for every docker command.
