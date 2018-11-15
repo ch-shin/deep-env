@@ -6,7 +6,7 @@ services:
     depends_on:
       - cuda-9-0_cudnn-7-0
     ports:
-      - 10000:8888
+      - ${JUPYTER_PORT}:8888
     environment:
       - HOME=${HOME}
       - JUPYTER_PASSWD=${JUPYTER_PASSWD}
